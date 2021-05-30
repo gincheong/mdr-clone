@@ -7,10 +7,6 @@ import { MainTitle } from '../'
 import { ISidebarNav } from '../../models';
 import { useLocation } from 'react-router';
 
-interface Props {
-  navLinks: ISidebarNav[];
-}
-
 const StyledSidebar = styled.div`
   background-color: #444; // var
   color: #f2f2f2; // var
@@ -50,5 +46,9 @@ const Sidebar = (props: Props) => {
     </StyledSidebar>
   )
 };
+
+interface Props {
+  navLinks: ISidebarNav[];
+}
 
 export default Sidebar;
