@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { isPropertySignature } from 'typescript';
 
 const StyledRipple = styled.div`
   background: rgba(255, 255, 255, 0.5);
