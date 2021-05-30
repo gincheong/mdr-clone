@@ -1,23 +1,24 @@
 import styled from 'styled-components';
+// Components
+import { CustomButton } from '../../components';
 
-const StyledMainTitle = styled.div`
-  color: #f2f2f2;
-  background-color: #567ace;
-
-  padding: 20px;
-  margin: 15px;
-  border-radius: 10px;
-
-  text-align: center;
-  font-size: 30px;
-  
-`;
+const StyledMainTitle = styled.div``;
 
 const MainTitle = () => {
-
   return (
     <StyledMainTitle>
-      Title or Logo
+      <CustomButton defaultColor="#567ace"
+        style={{
+          padding: '20px',
+          margin: '15px',
+          borderRadius: '10px',
+
+          textAlign: 'center',
+          fontSize: '30px'
+        }}
+      >
+        Title or Logo
+      </CustomButton>
     </StyledMainTitle>
   );  
 };

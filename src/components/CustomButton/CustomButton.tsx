@@ -1,14 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { CSSObject } from 'styled-components';
 // Child Components
 import Ripple from './Ripple';
 
 interface IStyledCustomButton {
   isSelected?: boolean;
+  defaultColor?: string;
 };
 const StyledCustomButton = styled.div<IStyledCustomButton>`
   color: #f2f2f2;
-  background-color: ${props => props.isSelected ? '#db706c' : '#333'}; // var
+  background-color: ${props => props.isSelected ?'#db706c' : props.defaultColor}; // var
   transition: background-color 0.5s linear;
 
   padding: 20px;
@@ -58,6 +59,8 @@ const CustomButton = (props: Props) => {
       onClick={onClick}
       ref={customButtonRef}
       isSelected={props.isSelected}
+      defaultColor={props.defaultColor}
+      style={props.style}
     >
       {props.children}
       {Object.keys(ripples).map(key => {
@@ -77,8 +80,9 @@ const CustomButton = (props: Props) => {
 interface Props {
   children?: React.ReactNode;
   isSelected?: boolean;
+  defaultColor?: string;
+  style?: CSSObject;
   // selectedColor?: string; // * 나중에 선택 색상 바꿀거면 추가하기
-  // defaultColor?: string;
 }
 
 export default CustomButton;
