@@ -3,11 +3,7 @@ import styled, { CSSObject } from 'styled-components';
 // Child Components
 import Ripple from './Ripple';
 
-interface IStyledCustomButton {
-  isSelected?: boolean;
-  defaultColor?: string;
-};
-const StyledCustomButton = styled.div<IStyledCustomButton>`
+const StyledCustomButton = styled.div<Props>`
   color: #f2f2f2;
   background-color: ${props => props.isSelected ?'#db706c' : props.defaultColor}; // var
   transition: background-color 0.5s linear;
