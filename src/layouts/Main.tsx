@@ -6,7 +6,7 @@ import { Header, Sidebar } from '../components';
 import DummySidebar from '../data/dummySidebar';
 
 const StyledMainContent = styled.div`
-  background-color: #f2f2f2;
+  background-color: #ddd;
 
   width: calc(100% - 250px); // sidebar 크기 제외
   float: right;
