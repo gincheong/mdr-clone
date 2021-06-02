@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledRipple = styled.div`
-  background: rgba(255, 255, 255, 0.5);
+const StyledRipple = styled.div<Partial<Props>>`
+  background: ${props => props.rippleColor === 'light' ?
+    'rgba(255, 255, 255, 0.6)' :
+    'rgba(0, 0, 0, 0.3)'};
 
   width: 10px;
   height: 10px;
@@ -25,12 +27,14 @@ const Ripple = (props: Props) => {
         left: props.coords.x,
         top: props.coords.y
       }}
+      rippleColor={props.rippleColor}
     />
   );
 };
 
 interface Props {
   onAnimationEnd: React.AnimationEventHandler;
+  rippleColor: 'light' | 'dark';
   coords: {
     x: number,
     y: number

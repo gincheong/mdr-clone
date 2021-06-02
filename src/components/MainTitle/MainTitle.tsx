@@ -7,7 +7,9 @@ const StyledMainTitle = styled.div``;
 const MainTitle = () => {
   return (
     <StyledMainTitle>
-      <CustomButton defaultColor="#567ace"
+      <CustomButton
+        defaultColor="#567ace"
+        rippleColor='light'
         style={{
           padding: '20px',
           margin: '15px',

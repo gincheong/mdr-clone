@@ -10,7 +10,9 @@ const SidebarNav = (props: Props) => {
     <NavLink to={`${props.layout}/${props.path}`}
       style={{ textDecoration: 'none' }}
     >
-      <CustomButton isSelected={props.selected}>
+      <CustomButton
+        rippleColor='light'
+        isSelected={props.selected}>
         {props.title}
       </CustomButton>
     </NavLink>

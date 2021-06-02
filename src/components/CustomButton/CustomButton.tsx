@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { CSSObject } from 'styled-components';
-// Child Components
+// Components
 import Ripple from './Ripple';
 
-const StyledCustomButton = styled.div<Props>`
+const StyledCustomButton = styled.div<Partial<Props>>`
   color: #f2f2f2;
   background-color: ${props => props.isSelected ?'#db706c' : props.defaultColor}; // var
   transition: background-color 0.5s linear;
@@ -20,10 +20,10 @@ const StyledCustomButton = styled.div<Props>`
 `;
 
 const CustomButton = (props: Props) => {
+  const { children, isSelected, defaultColor, style, rippleColor } = props;
+
   const [rippleKey, setRippleKey] = React.useState(0);
-  const [ripples, setRipples] = React.useState<
-    {[key: string]: { x: number, y: number }}
-  >({});
+  const [ripples, setRipples] = React.useState<{[key: string]: { x: number, y: number }}>({});
 
   const customButtonRef = React.useRef<HTMLDivElement>(null);
 
@@ -54,17 +54,18 @@ const CustomButton = (props: Props) => {
     <StyledCustomButton
       onClick={onClick}
       ref={customButtonRef}
-      isSelected={props.isSelected}
-      defaultColor={props.defaultColor}
-      style={props.style}
+      isSelected={isSelected}
+      defaultColor={defaultColor}
+      style={style}
     >
-      {props.children}
+      {children}
       {Object.keys(ripples).map(key => {
         return (
           <Ripple
             key={key}
             onAnimationEnd={(event) => onAnimationEnd(event, key)} 
             coords={ripples[key]}
+            rippleColor={rippleColor}
           />
         );
       })
@@ -78,6 +79,7 @@ interface Props {
   isSelected?: boolean;
   defaultColor?: string;
   style?: CSSObject;
+  rippleColor: 'light' | 'dark';
   // selectedColor?: string; // * 나중에 선택 색상 바꿀거면 추가하기
 }
 
