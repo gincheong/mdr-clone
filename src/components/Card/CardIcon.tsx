@@ -13,6 +13,7 @@ const StyledCardIcon = styled.div`
 const StyledImg = styled.img`
   width: 100%;
   height: 100%;
+  // ! image 아니라 div로 바꾸고, 안에 svg 같은 아이콘이 들어가야 정확
 `;
 
 const CardIcon = (props: Props) => {
