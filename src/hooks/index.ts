@@ -1,0 +1,1 @@
+export { useRouteName } from './useRouteName';
