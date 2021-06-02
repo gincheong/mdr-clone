@@ -2,6 +2,7 @@ export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as MainTitle } from './MainTitle/MainTitle';
 export { default as Header } from './Header/Header';
 export { default as CustomButton } from './CustomButton/CustomButton';
+export { default as Tooltip } from './CustomButton/Tooltip';
 export { default as Card } from './Card/Card';
 export { default as CardHeader } from './Card/CardHeader';
 export { default as CardIcon } from './Card/CardIcon';
