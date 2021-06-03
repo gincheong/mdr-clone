@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 // Components
-import { Header, Sidebar } from '../components';
+import { Footer, Header, Sidebar } from '../components';
 // DummyData
 import DummySidebar from '../data/dummySidebar';
 
@@ -34,6 +34,7 @@ const Main = () => {
         })
         }
       </Switch>
+      <Footer />
     </StyledMainContent>
     </>
   )
