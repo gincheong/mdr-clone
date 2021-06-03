@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledGridItem = styled.div`
   margin: 10px;
-  align-self: center;
+  align-self: flex-start;
   flex: 1;
 `;
 
