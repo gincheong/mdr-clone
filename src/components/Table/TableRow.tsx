@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+// Components
+import CustomText from '../CustomText/CustomText';
 
 const STableRow = styled.tr`
   border-bottom: 1px solid #ccc;
@@ -17,7 +19,9 @@ const TableRow = (props: Props) => {
     <STableRow>
       {data.map(each => {
         return (
-          <STableData>{each}</STableData>
+          <STableData key={each}>
+            <CustomText medium>{each}</CustomText>
+          </STableData>
         )
       })
       }
