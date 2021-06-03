@@ -23,6 +23,8 @@ const SCustomText = styled.div<Props>`
       return '100%';
     }
   }};
+
+  font-weight: ${props => props.bold ? 'bold' : 'normal'};
 `;
 
 const CustomText = (props: Props) => {
@@ -41,7 +43,8 @@ interface Props {
   gray?: boolean;
   large?: boolean;
   small?: boolean;
-  medium?: boolean
+  medium?: boolean;
+  bold?: boolean;
 }
 
 export default CustomText;
