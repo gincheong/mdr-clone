@@ -17,6 +17,8 @@ const SCustomText = styled.div<Props>`
       return '150%';
     } else if (props.small) {
       return '75%';
+    } else if (props.medium) {
+      return '85%';
     } else {
       return '100%';
     }
@@ -39,6 +41,7 @@ interface Props {
   gray?: boolean;
   large?: boolean;
   small?: boolean;
+  medium?: boolean
 }
 
 export default CustomText;
