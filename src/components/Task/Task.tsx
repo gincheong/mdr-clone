@@ -7,7 +7,7 @@ import TaskRow from './TaskRow';
 const STaskContainer = styled.div``;
 
 const STaskHeader = styled.div`
-  background-color: #b7d3e9;
+  background: linear-gradient(to right, #f1d2e7, #bbb0dc);
   
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SCardTitle = styled.div`
-  background-color: #cee5d5;
+  background: linear-gradient(to right, #a7e0e1, #b7d3e9);
   
   border-radius: 5px;
   padding: 15px 30px;
