@@ -5,7 +5,10 @@ import Ripple from './Ripple';
 
 const StyledCustomButton = styled.div<Partial<Props>>`
   color: #f2f2f2;
-  background-color: ${props => props.isSelected ?'#db706c' : props.defaultColor}; // var
+  background-color: ${props => props.isSelected ?
+    ( props.selectedColor ?? '#db706c') :
+    props.defaultColor
+  };
   transition: background-color 0.5s linear;
 
   padding: 20px;
@@ -20,7 +23,7 @@ const StyledCustomButton = styled.div<Partial<Props>>`
 `;
 
 const CustomButton = (props: Props) => {
-  const { children, isSelected, defaultColor, style, rippleColor } = props;
+  const { children, isSelected, selectedColor, defaultColor, style, rippleColor } = props;
 
   const [rippleKey, setRippleKey] = React.useState(0);
   const [ripples, setRipples] = React.useState<{[key: string]: { x: number, y: number }}>({});
@@ -29,6 +32,11 @@ const CustomButton = (props: Props) => {
 
   const onClick = (event: React.MouseEvent) => {
     const $target = customButtonRef.current as HTMLDivElement;
+    
+    event.target = $target;
+    // ripple에서 발생한 이벤트를 button에서 발생한 것으로 변경
+    if (props.onClick) {props.onClick(event); }
+
     const rect = $target.getBoundingClientRect();
 
     setRipples(prevState => {
@@ -56,6 +64,7 @@ const CustomButton = (props: Props) => {
       ref={customButtonRef}
       isSelected={isSelected}
       defaultColor={defaultColor}
+      selectedColor={selectedColor}
       style={style}
     >
       {children}
@@ -80,7 +89,8 @@ interface Props {
   defaultColor?: string;
   style?: CSSObject;
   rippleColor: 'light' | 'dark';
-  // selectedColor?: string; // * 나중에 선택 색상 바꿀거면 추가하기
+  selectedColor?: string;
+  onClick?: React.MouseEventHandler;
 }
 
 export default CustomButton;
