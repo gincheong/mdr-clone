@@ -5,37 +5,42 @@ import { Footer, Header, Sidebar } from '../components';
 // DummyData
 import DummySidebar from '../data/dummySidebar';
 
-const StyledMainContent = styled.div`
+const SContainer = styled.div`
   background-color: #ddd;
 
   width: calc(100% - 250px); // sidebar 크기 제외
   float: right;
-  min-height: 100vh;
+`;
+
+const SContent = styled.div`
+  min-height: calc(100vh - 160px);
 `;
 
 const Main = () => {
   return (
     <>
     <Sidebar navLinks={DummySidebar} />
-    <StyledMainContent>
+    <SContainer>
       <Header />
-      <Switch>
-        {DummySidebar.map((each, key) => {
-          if (each.layout === '/main') {
-            return (
-              <Route
-                path={`${each.layout}/${each.path}`} 
-                component={each.component} 
-                key={key}
-              />
-            );
+      <SContent>
+        <Switch>
+          {DummySidebar.map((each, key) => {
+            if (each.layout === '/main') {
+              return (
+                <Route
+                  path={`${each.layout}/${each.path}`} 
+                  component={each.component} 
+                  key={key}
+                />
+              );
+            }
+            return null;
+          })
           }
-          return null;
-        })
-        }
-      </Switch>
+        </Switch>
+      </SContent>
       <Footer />
-    </StyledMainContent>
+    </SContainer>
     </>
   )
 };

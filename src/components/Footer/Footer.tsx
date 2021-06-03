@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { CustomButton, CustomText } from '../../components';
 
 const SFooter = styled.footer`
-  /* padding: 20px; */
-  margin-top: 10px;
+  bottom: 0;
   display: flex;
 `;
 
