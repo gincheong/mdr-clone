@@ -1,11 +1,12 @@
 import React from 'react';
 // Components
-import { CustomText } from '../components';
+import { CustomText, Task } from '../components';
 import { Card, CardIcon, CardHeader, CardFooter, CardTitle } from '../components';
 import { Table, TableRow } from '../components';
 import { GridContainer, GridItem } from '../components';
 // DummyData
 import DummyTable from '../data/dummyTable';
+import DummyTasks from '../data/dummyTasks';
 
 const Dashboard = () => {
 
@@ -96,19 +97,19 @@ const Dashboard = () => {
     <GridContainer>
       <GridItem>
         <Card>
+        <Task tasks={DummyTasks} />
+        </Card>
+      </GridItem>
+      <GridItem>
+        <Card>
           <CardTitle>
             <CustomText large>Employees Stats</CustomText>
             <CustomText gray>New employees on 15th September, 2016</CustomText>
           </CardTitle>
           <Table head={['ID', 'Name', 'Salary', 'Country']}>
-            {DummyTable.map(each => <TableRow data={each} />)}
+            {DummyTable.map(each => <TableRow key={each.join()} data={each} />)}
           </Table>
         </Card>
-      </GridItem>
-      <GridItem>
-        <Table>
-          
-        </Table>
       </GridItem>
     </GridContainer>
     </>

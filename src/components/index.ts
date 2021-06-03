@@ -13,3 +13,5 @@ export { default as GridItem } from './Grid/GridItem';
 export { default as Table } from './Table/Table';
 export { default as TableRow } from './Table/TableRow';
 export { default as CustomText } from './CustomText/CustomText';
+export { default as Task } from './Task/Task';
+export { default as Checkbox } from './Checkbox/Checkbox';
