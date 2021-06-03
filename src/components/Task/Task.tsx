@@ -27,7 +27,6 @@ const Task = (props: Props) => {
   const onClick = (event: React.MouseEvent) => {
     const $target = event.target as HTMLDivElement;
     const category = $target.innerText.toLowerCase();
-    console.log($target);
     setSelectedCategory(category);
   };
 
