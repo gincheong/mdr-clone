@@ -76,13 +76,10 @@ const CustomInput = (props: Props) => {
   React.useEffect(() => {
     if (label) {
       if (value !== '' || isFocused) {
+        setRestoreAnimation(false);
         setAnimation(true);
       } else if (!isFocused) {
         setRestoreAnimation(true);
-        setTimeout(() => {
-          setAnimation(false);
-          setRestoreAnimation(false);
-        }, 100);
       }
     } else {
       if (value !== '') {
