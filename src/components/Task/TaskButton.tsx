@@ -70,11 +70,7 @@ const TaskButton = (props: Props) => {
       {showTooltip && <STooltip fadeOut={fadeOut}>{hoverContent}</STooltip>}
       <CustomButton
         rippleColor='dark'
-        style={{
-          margin: '0',
-          padding: '5px',
-          color: '#000',
-        }}
+        style={{ padding: '5px' }}
       >
         {children}
       </CustomButton>

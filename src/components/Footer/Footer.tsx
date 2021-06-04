@@ -22,16 +22,24 @@ const Footer = () => {
   return (
     <SFooter>
       <SButtonContainer>
-        <CustomButton rippleColor='light' style={{ color: '#000', margin: '10px 0px 10px 10px' }}>
+        <CustomButton rippleColor='light' style={{
+          color: '#000', margin: '10px 0px 10px 10px', padding: '20px',
+        }}>
           <CustomText medium bold>HOME</CustomText>
         </CustomButton>
-        <CustomButton rippleColor='light' style={{ color: '#000', margin: '10px 0px 10px 10px' }}>
+        <CustomButton rippleColor='light' style={{
+          color: '#000', margin: '10px 0px 10px 10px', padding: '20px',
+        }}>
           <CustomText medium bold>COMPANY</CustomText>
         </CustomButton>
-        <CustomButton rippleColor='light' style={{ color: '#000', margin: '10px 0px 10px 10px' }}>
+        <CustomButton rippleColor='light' style={{
+          color: '#000', margin: '10px 0px 10px 10px', padding: '20px',
+        }}>
           <CustomText medium bold>PORTFOLIO</CustomText>
         </CustomButton>
-        <CustomButton rippleColor='light' style={{ color: '#000', margin: '10px 0px 10px 10px' }}>
+        <CustomButton rippleColor='light' style={{
+          color: '#000', margin: '10px 0px 10px 10px', padding: '20px',
+        }}>
           <CustomText medium bold>BLOG</CustomText>
         </CustomButton>
       </SButtonContainer>

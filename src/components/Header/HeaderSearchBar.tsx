@@ -71,8 +71,6 @@ const HeaderSearchBar = () => {
         rippleColor='dark'
         style={{
           padding: 0,
-          margin: 0,
-          color: '#000',
           borderRadius: '50px'
         }}
       >

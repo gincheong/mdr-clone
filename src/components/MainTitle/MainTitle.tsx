@@ -11,6 +11,7 @@ const MainTitle = () => {
         defaultColor="#567ace"
         rippleColor='light'
         style={{
+          color: '#f2f2f2',
           padding: '20px',
           margin: '15px',
           borderRadius: '10px',
@@ -19,7 +20,7 @@ const MainTitle = () => {
           fontSize: '30px'
         }}
       >
-        Title or Logo
+        <i className="fas fa-copy"></i> mdr-clone
       </CustomButton>
     </StyledMainTitle>
   );  

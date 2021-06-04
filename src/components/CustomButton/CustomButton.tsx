@@ -4,15 +4,15 @@ import styled, { CSSObject } from 'styled-components';
 import Ripple from './Ripple';
 
 const StyledCustomButton = styled.div<Partial<Props>>`
-  color: #f2f2f2;
+  color: #000;
   background-color: ${props => props.isSelected ?
     ( props.selectedColor ?? '#db706c') :
     props.defaultColor
   };
   transition: background-color 0.5s linear;
 
-  padding: 20px;
-  margin: 15px;
+  padding: 10px 15px;
+  /* margin: 15px; */
   border-radius: 10px;
 
   text-decoration: none;

@@ -38,11 +38,7 @@ const Task = (props: Props) => {
           <CustomButton
             key={each}
             rippleColor='light'
-            style={{
-              color: '#000',
-              margin: '0 0 0 10px',
-              padding: '10px 15px',
-            }}
+            style={{ marginLeft: '10px' }}
             onClick={onClick}
             selectedColor="rgba(255, 255, 255, 0.4)"
             isSelected={selectedCategory === each}

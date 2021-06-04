@@ -12,7 +12,13 @@ const SidebarNav = (props: Props) => {
     >
       <CustomButton
         rippleColor='light'
-        isSelected={props.selected}>
+        isSelected={props.selected}
+        style={{
+          padding: '20px',
+          margin: '15px',
+          color: '#f2f2f2',
+        }}
+      >
         {props.title}
       </CustomButton>
     </NavLink>

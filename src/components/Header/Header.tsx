@@ -23,50 +23,31 @@ const Header = () => {
     <StyledHeader>
       <StyledHeaderTitle>{routeName}</StyledHeaderTitle>
       <HeaderSearchBar />
+      <CustomButton rippleColor='dark'>
+        <i className="fas fa-th-large"></i>
+      </CustomButton>
       <Tooltip
         direction="bottom"
         tooltipChildren={
-          <CustomButton
-            rippleColor='dark'
-            defaultColor='inherit'
-            style={{ color: '#000' }}
-          >
+          <CustomButton rippleColor='dark'>
             asd
           </CustomButton>
         }
       >
-        <CustomButton
-          rippleColor='dark'
-          style={{
-            padding: '10px',
-            margin: 0,
-            color: '#000',
-            backgroundColor: 'inherit',
-          }}>
-          A
+        <CustomButton rippleColor='dark'>
+          <i className="fas fa-bell"></i>
         </CustomButton>
       </Tooltip>
       <Tooltip
         direction="bottom"
         tooltipChildren={
-          <CustomButton
-            rippleColor='dark'
-            defaultColor='inherit'
-            style={{ color: '#000' }}
-          >
+          <CustomButton rippleColor='dark'>
             asd
           </CustomButton>
         }
       >
-        <CustomButton
-          rippleColor='dark'
-          style={{
-            padding: '10px',
-            margin: 0,
-            color: '#000',
-            backgroundColor: 'inherit',
-          }}>
-          B
+        <CustomButton rippleColor='dark'>
+          <i className="fas fa-user"></i>
         </CustomButton>
       </Tooltip>
     </StyledHeader>

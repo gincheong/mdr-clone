@@ -18,7 +18,6 @@ const Checkbox = (props: Props) => {
     <CustomButton
       rippleColor='dark'
       style={{
-        margin: '0',
         padding: '10px',
         borderRadius: '9999px'
       }}
