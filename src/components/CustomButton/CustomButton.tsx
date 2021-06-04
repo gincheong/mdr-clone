@@ -12,7 +12,6 @@ const StyledCustomButton = styled.div<Partial<Props>>`
   transition: background-color 0.5s linear;
 
   padding: 10px 15px;
-  /* margin: 15px; */
   border-radius: 10px;
 
   text-decoration: none;
