@@ -2,31 +2,36 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCardIcon = styled.div`
-  width: 100px;
-  height: 100px;
+  background: linear-gradient(to right, #ff69a5, #d9598c);
+  color: #f2f2f2;
+
+  text-align: center;
+
+  padding: 30px;
   float: left;
   margin-top: -40px;
   margin-left: 10px;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
-`;
 
-const StyledImg = styled.img`
-  width: 100%;
-  height: 100%;
-  // ! image 아니라 div로 바꾸고, 안에 svg 같은 아이콘이 들어가야 정확
+  & > i {
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const CardIcon = (props: Props) => {
+  const { children } = props;
 
   return (
     <StyledCardIcon>
-      <StyledImg src={props.src} />
+      {children}
     </StyledCardIcon>
   );
 };
 
 interface Props {
-  src: string;
+  children?: React.ReactNode;
 }
 
 export default CardIcon;

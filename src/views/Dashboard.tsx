@@ -16,7 +16,9 @@ const Dashboard = () => {
       <GridItem>
         <Card>
           <CardHeader icon>
-            <CardIcon src={"https://random.imagecdn.app/100/100"} />
+            <CardIcon>
+              <i className="far fa-clone"></i>
+            </CardIcon>
             <CustomText gray>Used Space</CustomText>
             <CustomText large>
               49/50 <small>GB</small>
@@ -28,7 +30,9 @@ const Dashboard = () => {
       <GridItem>
         <Card>
           <CardHeader icon>
-            <CardIcon src={"https://random.imagecdn.app/101/101"} />
+            <CardIcon>
+              <i className="fas fa-home"></i>
+            </CardIcon>
             <CustomText gray>Revenue</CustomText>
             <CustomText large>$34,245</CustomText>
           </CardHeader>
@@ -38,7 +42,9 @@ const Dashboard = () => {
       <GridItem>
         <Card>
           <CardHeader icon>
-            <CardIcon src={"https://random.imagecdn.app/102/102"} />
+            <CardIcon>
+              <i className="fas fa-info-circle"></i>
+            </CardIcon>
             <CustomText gray>Fixed Issues</CustomText>
             <CustomText large>75</CustomText>
           </CardHeader>
@@ -48,7 +54,9 @@ const Dashboard = () => {
       <GridItem>
         <Card>
           <CardHeader icon>
-            <CardIcon src={"https://random.imagecdn.app/103/103"} />
+            <CardIcon>
+              <i className="fas fa-child"></i>
+            </CardIcon>
             <CustomText gray>Followers</CustomText>
             <CustomText large>+245</CustomText>
           </CardHeader>
