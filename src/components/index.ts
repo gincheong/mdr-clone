@@ -16,3 +16,4 @@ export { default as CustomText } from './CustomText/CustomText';
 export { default as Task } from './Task/Task';
 export { default as Checkbox } from './Checkbox/Checkbox';
 export { default as Footer } from './Footer/Footer';
+export { default as CustomInput } from './CustomInput/CustomInput';

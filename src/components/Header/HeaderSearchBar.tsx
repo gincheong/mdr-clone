@@ -1,40 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // Components
-import { CustomButton } from '../../components';
-
-interface ISearchBarContainer {
-  isFocused: boolean;
-}
-const StyledSearchBarContainer = styled.div<ISearchBarContainer>`
-  position: relative;
-  display: flex;
-
-  &:after {
-    border-bottom: 2px solid #d9598c;
-
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    content: '';
-    
-    transform: ${props => props.isFocused ? 'scaleX(1)' : 'scaleX(0)'};
-    transition: transform 200ms ease-out;
-  }
-`;
-
-const SearchInput = styled.input`
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid #aaa;
-  background-color: inherit;
-
-  &:focus {
-    outline: none;
-  }
-`;
+import { CustomButton, CustomInput } from '../../components';
 
 const SearchIcon = styled.div`
   border: 1px solid #ddd;
@@ -55,18 +22,9 @@ const SearchIcon = styled.div`
 `;
 
 const HeaderSearchBar = () => {
-  const [isFocused, setIsFocused] = React.useState(false);
-
   return (
     <>
-      <StyledSearchBarContainer isFocused={isFocused}>
-        <SearchInput
-          placeholder="Search"
-          type="text"
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
-        />
-      </StyledSearchBarContainer>
+      <CustomInput type='text' placeholder='Search' />
       <CustomButton
         rippleColor='dark'
         style={{
