@@ -28,6 +28,7 @@ const SInput = styled.input`
   border: none;
   border-bottom: 2px solid #aaa;
   background-color: inherit;
+  width: 100%;
 
   &:focus {
     outline: none;
@@ -35,7 +36,7 @@ const SInput = styled.input`
 `;
 
 const CustomInput = (props: Props) => {
-  const { type, placeholder } = props;
+  const { type, placeholder, disabled } = props;
 
   const [isFocused, setIsFocused] = React.useState(false);
 
@@ -44,6 +45,7 @@ const CustomInput = (props: Props) => {
       <SInput
         type={type}
         placeholder={placeholder ?? ''}
+        disabled={disabled}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       />
@@ -54,6 +56,7 @@ const CustomInput = (props: Props) => {
 interface Props {
   type: string;
   placeholder?: string;
+  disabled?: boolean
 }
 
 export default CustomInput;
