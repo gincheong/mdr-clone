@@ -13,7 +13,7 @@ const Dashboard = () => {
   return (
     <>
     <GridContainer>
-      <GridItem>
+      <GridItem size={3}>
         <Card>
           <CardHeader icon>
             <CardIcon>
@@ -27,7 +27,7 @@ const Dashboard = () => {
           <CardFooter>Get more space</CardFooter>
         </Card>
       </GridItem>
-      <GridItem>
+      <GridItem size={3}>
         <Card>
           <CardHeader icon>
             <CardIcon>
@@ -39,7 +39,7 @@ const Dashboard = () => {
           <CardFooter>Last 24 Hours</CardFooter>
         </Card>
       </GridItem>
-      <GridItem>
+      <GridItem size={3}>
         <Card>
           <CardHeader icon>
             <CardIcon>
@@ -51,7 +51,7 @@ const Dashboard = () => {
           <CardFooter>Tracked from Github</CardFooter>
         </Card>
       </GridItem>
-      <GridItem>
+      <GridItem size={3}>
         <Card>
           <CardHeader icon>
             <CardIcon>
@@ -65,7 +65,7 @@ const Dashboard = () => {
       </GridItem>
     </GridContainer>
     <GridContainer>
-      <GridItem>
+      <GridItem size={4}>
         <Card>
           <CardTitle>
             1번 차트
@@ -77,7 +77,7 @@ const Dashboard = () => {
           <CardFooter>updated 4minutes ago</CardFooter>
         </Card>
       </GridItem>
-      <GridItem>
+      <GridItem size={4}>
         <Card>
           <CardTitle>
             2번 차트
@@ -89,7 +89,7 @@ const Dashboard = () => {
           <CardFooter>campaign sent 2 days ago</CardFooter>
         </Card>
       </GridItem>
-      <GridItem>
+      <GridItem size={4}>
         <Card>
           <CardTitle>
             3번 차트
@@ -103,12 +103,12 @@ const Dashboard = () => {
       </GridItem>
     </GridContainer>
     <GridContainer>
-      <GridItem>
+      <GridItem size={6}>
         <Card>
         <Task tasks={DummyTasks} />
         </Card>
       </GridItem>
-      <GridItem>
+      <GridItem size={6}>
         <Card>
           <CardTitle>
             <CustomText large>Employees Stats</CustomText>
