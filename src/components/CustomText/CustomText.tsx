@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { CSSObject } from 'styled-components';
 
 const SCustomText = styled.div<Props>`
   color: ${props => {
@@ -45,6 +45,7 @@ interface Props {
   small?: boolean;
   medium?: boolean;
   bold?: boolean;
+  style?: CSSObject;
 }
 
 export default CustomText;
