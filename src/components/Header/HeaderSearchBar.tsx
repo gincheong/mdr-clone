@@ -24,7 +24,7 @@ const SearchIcon = styled.div`
 const HeaderSearchBar = () => {
   return (
     <>
-      <CustomInput type='text' placeholder='Search' />
+      <CustomInput type='text' labelType='placeholder' labelString='Search' />
       <CustomButton
         rippleColor='dark'
         style={{

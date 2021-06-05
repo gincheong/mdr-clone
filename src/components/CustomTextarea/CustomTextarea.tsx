@@ -8,14 +8,13 @@ interface IContainer {
 }
 const SContainer = styled.div<IContainer>`
   position: relative;
-  display: flex;
-
+  
   &:before {
     border-bottom: 1px solid #aaa;
 
     left: 0;
     top: 0;
-    bottom: 0;
+    bottom: 4px;
     right: 0;
     position: absolute;
     content: '';
@@ -28,29 +27,29 @@ const SContainer = styled.div<IContainer>`
 
     left: 0;
     top: 0;
-    bottom: 0;
+    bottom: 4px;
     right: 0;
     position: absolute;
     content: '';
     
     transform: ${props => props.isFocused ? 'scaleX(1)' : 'scaleX(0)'};
     transition: transform 200ms ease-out;
-  } 
+  }
 `;
 
-const SInput = styled.input`
-  padding: 10px;
+const STextarea = styled.textarea`
+  resize: none;
   border: none;
   background-color: inherit;
   width: 100%;
-
+  
   &:focus {
     outline: none;
   }
 `;
 
-const CustomInput = (props: Props) => {
-  const { type, labelType, labelString, disabled } = props;
+const CustomTextarea = (props: Props) => {
+  const { labelType, labelString } = props;
 
   const [isFocused, setIsFocused] = React.useState(false);
   const [value, setValue] = React.useState('');
@@ -60,30 +59,27 @@ const CustomInput = (props: Props) => {
       <InputLabel
         type={labelType}
         htmlFor={labelString}
-        target='input'
+        target='textarea'
         value={value}
         isFocused={isFocused}
       >
         {labelString}
-      </InputLabel> 
-      <SInput
+      </InputLabel>
+      <STextarea
+        rows={5}
         id={labelString}
-        type={type}
-        disabled={disabled}
         value={value}
         onChange={(event) => setValue(event.target.value)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       />
     </SContainer>
-  );
+  ); 
 };
 
 interface Props {
-  type: string;
   labelType: 'label' | 'placeholder';
   labelString: string;
-  disabled?: boolean
 }
 
-export default CustomInput;
+export default CustomTextarea;
