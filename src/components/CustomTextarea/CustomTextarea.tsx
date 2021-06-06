@@ -13,7 +13,6 @@ const SContainer = styled.div<IContainer>`
     border-bottom: 1px solid #aaa;
 
     left: 0;
-    top: 0;
     bottom: 4px;
     right: 0;
     position: absolute;
@@ -26,7 +25,6 @@ const SContainer = styled.div<IContainer>`
     border-bottom: 2px solid #d9598c;
 
     left: 0;
-    top: 0;
     bottom: 4px;
     right: 0;
     position: absolute;
