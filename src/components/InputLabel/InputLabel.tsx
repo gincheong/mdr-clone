@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+// Hooks
+import { useComponentDidUpdate } from '../../hooks';
 
 interface ILabel {
   activate?: boolean;
@@ -57,22 +59,26 @@ const InputLabel = (props: Props) => {
   const [activate, setActivate] = React.useState(false);
   const [deactivate, setDeactivate] = React.useState(false);
 
+  const componentDidUpdate = useComponentDidUpdate();
+
   React.useEffect(() => {
-    if (type === 'label') {
-      if (value !== '' || isFocused) {
-        setDeactivate(false);
-        setActivate(true);
-      } else if (!isFocused) {
-        setDeactivate(true);
-      } 
-    } else if (type === 'placeholder') {
-      if (value !== '') {
-        setShowLabel(false);
-      } else {
-        setShowLabel(true);
+    if (componentDidUpdate) {
+      if (type === 'label') {
+        if (value !== '' || isFocused) {
+          setDeactivate(false);
+          setActivate(true);
+        } else if (!isFocused) {
+          setDeactivate(true);
+        } 
+      } else if (type === 'placeholder') {
+        if (value !== '') {
+          setShowLabel(false);
+        } else {
+          setShowLabel(true);
+        }
       }
     }
-  }, [value, type, isFocused]);
+  }, [value, type, isFocused, componentDidUpdate]);
 
   return (
     <>
