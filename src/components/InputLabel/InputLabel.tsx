@@ -12,6 +12,7 @@ const SLabel = styled.label<ILabel>`
   font-size: 13px;
   color: #848484;
   position: absolute;
+  cursor: text;
 `;
 
 const SInputLabel = styled(SLabel)`
