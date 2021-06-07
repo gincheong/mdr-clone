@@ -5,7 +5,7 @@ import { Card, CardIcon, CardHeader, CardFooter, CardTitle } from '../components
 import { Table, TableRow } from '../components';
 import { GridContainer, GridItem } from '../components';
 // DummyData
-import DummyTable from '../data/dummyTable';
+import DummyTable from '../data/dummyDashboardTable';
 import DummyTasks from '../data/dummyTasks';
 
 const Dashboard = () => {
