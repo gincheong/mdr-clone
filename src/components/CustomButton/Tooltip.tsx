@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+// Components
+import Badge from './Badge';
 
 const StyledContainer = styled.div`
   position: relative;
@@ -26,7 +28,7 @@ const TooltipContent = styled.div<ITooltipContent>`
 `;
 
 const Tooltip = (props: Props) => {
-  const { children, tooltipChildren, direction } = props;
+  const { children, tooltipChildren, badge, direction } = props;
 
   const [showTooltip, setShowTooltip] = React.useState(false);
 
@@ -54,6 +56,7 @@ const Tooltip = (props: Props) => {
   return (
     <StyledContainer onClick={onClick}>
       {children}
+      {badge && <Badge notiCount={badge} />}
       {showTooltip && 
         <TooltipContent 
           showTooltip={showTooltip}
@@ -69,6 +72,7 @@ const Tooltip = (props: Props) => {
 interface Props {
   children?: React.ReactNode;
   tooltipChildren: React.ReactNode;
+  badge?: number;
   direction: 'left' | 'right' | 'top' | 'bottom';
 }
 
