@@ -21,3 +21,4 @@ export { default as Footer } from './Footer/Footer';
 export { default as CustomInput } from './CustomInput/CustomInput';
 export { default as InputLabel } from './InputLabel/InputLabel';
 export { default as CustomTextarea } from './CustomTextarea/CustomTextarea';
+export { default as SnackbarButton } from './SnackbarButton/SnackbarButton';
