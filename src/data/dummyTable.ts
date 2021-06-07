@@ -1,8 +1,10 @@
 const dummyTable = [
-  ['1', 'Dakota Rice', '$36,783', 'Niger'],
-  ['2', 'Minerva Hooper', '$23,789', 'Curaçao'],
-  ['3', 'Sage Rodriguez', '$56,142', 'Netherlands'],
-  ['4', 'Philip Chaney', '$38,735', 'Korea, South'],
+  ['Dakota Rice',	'Niger', 'Oud-Turnhout', '$36,738'],
+  ['Minerva Hooper', 'Curaçao', 'Sinaai-Waas', '$23,789'],
+  ['Sage Rodriguez', 'Netherlands', 'Baileux', '$56,142'],
+  ['Philip Chaney', 'Korea, South', 'Overland Park', '$38,735'],
+  ['Doris Greene', 'Malawi', 'Feldkirchen in Kärnten', '$63,542'],
+  ['Mason Porter', 'Chile', 'Gloucester', '$78,615'],
 ];
 
 export default dummyTable;
