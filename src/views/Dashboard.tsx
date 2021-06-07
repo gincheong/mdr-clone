@@ -105,7 +105,7 @@ const Dashboard = () => {
     <GridContainer>
       <GridItem size={6}>
         <Card>
-        <Task tasks={DummyTasks} />
+          <Task tasks={DummyTasks} />
         </Card>
       </GridItem>
       <GridItem size={6}>
