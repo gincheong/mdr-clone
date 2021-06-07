@@ -7,6 +7,8 @@ export { default as Card } from './Card/Card';
 export { default as CardHeader } from './Card/CardHeader';
 export { default as CardTitle } from './Card/CardTitle';
 export { default as CardIcon } from './Card/CardIcon';
+export { default as CardProfileImg } from './Card/CardProfileImg';
+export { default as CardProfileDescription } from './Card/CardProfileDescription';
 export { default as CardFooter } from './Card/CardFooter';
 export { default as GridContainer } from './Grid/GridContainer';
 export { default as GridItem } from './Grid/GridItem';

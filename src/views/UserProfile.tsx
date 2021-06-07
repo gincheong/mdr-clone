@@ -1,7 +1,7 @@
 import React from 'react';
 // Components
 import { GridContainer, GridItem } from '../components';
-import { Card, CardIcon, CardTitle } from '../components';
+import { Card, CardProfileDescription, CardProfileImg, CardTitle } from '../components';
 import { CustomInput, CustomText, CustomButton, CustomTextarea } from '../components';
 
 const UserProfile = () => {
@@ -61,12 +61,33 @@ const UserProfile = () => {
       </GridItem>
       <GridItem size={4}>
         <Card>
-          <CardIcon>
-            <i className="far fa-clone"></i>
-          </CardIcon>
-          <CustomText gray>
-            CEO / CO-FOUNDER
-          </CustomText>
+          <CardProfileImg
+            src='https://pbs.twimg.com/profile_images/1335600379090759681/Az89GwTv_200x200.jpg'
+          />
+          <CardProfileDescription>
+            <CustomText gray small>
+              CEO / CO-FOUNDER
+            </CustomText>
+            <br />
+            <CustomText>
+              Alec Thompson
+            </CustomText>
+            <br />
+            <CustomText small>
+              Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+            </CustomText>
+            <CustomButton
+              rippleColor='light'
+              defaultColor='#202946'
+              style={{
+                width: 'fit-content',
+                marginTop: '20px',
+                color: '#f2f2f2',
+              }}
+            >
+              FOLLOW
+            </CustomButton>
+          </CardProfileDescription>
         </Card>
       </GridItem>
     </GridContainer>
