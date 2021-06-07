@@ -1,9 +1,8 @@
 import React from 'react';
 // Components
 import { GridContainer, GridItem } from '../components';
-import { Card, CardTitle } from '../components';
-import { CustomText } from '../components';
-import { Profile } from '../components';
+import { Card, CardIcon, CardTitle } from '../components';
+import { CustomInput, CustomText, CustomButton, CustomTextarea } from '../components';
 
 const UserProfile = () => {
 
@@ -15,12 +14,59 @@ const UserProfile = () => {
             <CustomText large>Edit Profile</CustomText>
             <CustomText small>Complete your profile</CustomText>
           </CardTitle>
-          <Profile />
+          <GridContainer>
+            <GridItem size={4}>
+              <CustomInput type='text' labelType='label' labelString='Company (disabled)' disabled />
+            </GridItem>
+            <GridItem size={4}>
+              <CustomInput type='text' labelType='label' labelString='Username' />
+            </GridItem>
+            <GridItem size={4}>
+              <CustomInput type='text' labelType='label' labelString='Email Address' />
+            </GridItem>
+          </GridContainer>
+          <GridContainer>
+            <GridItem size={6}>
+              <CustomInput type='text' labelType='label' labelString='First Name' />
+            </GridItem>
+            <GridItem size={6}>
+              <CustomInput type='text' labelType='label' labelString='Last Name' />
+            </GridItem>
+          </GridContainer>
+          <GridContainer>
+            <GridItem size={4}>
+              <CustomInput type='text' labelType='label' labelString='City' />
+            </GridItem>
+            <GridItem size={4}>
+              <CustomInput type='text' labelType='label' labelString='Country' />
+            </GridItem>
+            <GridItem size={4}>
+              <CustomInput type='text' labelType='label' labelString='Postal Code' />
+            </GridItem>
+          </GridContainer>
+          <GridContainer>
+            <GridItem size={12}>
+              <CustomText bold gray style={{ marginBottom: '20px' }}>About Me</CustomText>
+              <CustomTextarea labelType='label'
+                labelString="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
+              />
+            </GridItem>
+          </GridContainer>
+          <GridContainer>
+            <CustomButton rippleColor='light' defaultColor="#cee5d5">
+              UPDATE PROFILE
+            </CustomButton>
+          </GridContainer>
         </Card>
       </GridItem>
       <GridItem size={4}>
         <Card>
-          asdqwe
+          <CardIcon>
+            <i className="far fa-clone"></i>
+          </CardIcon>
+          <CustomText gray>
+            CEO / CO-FOUNDER
+          </CustomText>
         </Card>
       </GridItem>
     </GridContainer>
