@@ -16,9 +16,11 @@ const Table = (props: Props) => {
 
   return (
     <STable>
-      <SThead>
-        <TableRow data={head ?? []} />
-      </SThead>
+      {head && 
+        <SThead>
+          <TableRow data={head} />
+        </SThead>
+      }
       <tbody>
         {children}
       </tbody>
