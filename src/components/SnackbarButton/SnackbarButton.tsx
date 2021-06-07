@@ -1,14 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { CSSObject } from 'styled-components';
 // Components
 import Snackbar from './Snackbar';
 import { CustomButton } from '../../components';
 
 const SContainer = styled.div`
+  margin: 10px;
 `;
 
 const SnackbarButton = (props: Props) => {
-  const { children, buttonText, position } = props;
+  const { children, buttonText, position, style } = props;
 
   const [initOpacity, setInitOpacity] = React.useState('0');
   const [showSnackbar, setShowSnackbar] = React.useState(false);
@@ -25,11 +26,11 @@ const SnackbarButton = (props: Props) => {
   };
 
   return (
-    <SContainer onTransitionEnd={onTransitionEnd}>
+    <SContainer onTransitionEnd={onTransitionEnd} style={style}>
       <CustomButton
         rippleColor='light'
         style={{
-          width: 'fit-content',
+          textAlign: 'center',
           backgroundColor: '#9d36b3',
           color: '#f2f2f2',
           padding: '10px 60px',
@@ -55,6 +56,7 @@ interface Props {
   position: 'top-left' | 'top-center' | 'top-right' |
             'bottom-left' | 'bottom-center' | 'bottom-right';
   buttonText: string;
+  style?: CSSObject;
 }
 
 export default SnackbarButton;

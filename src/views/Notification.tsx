@@ -14,25 +14,55 @@ const Notification = () => {
             <CustomText large>Notifications</CustomText>
             <CustomText small>Handcrafted by our friends from Material UI and styled by Creative Tim. Please checkout the full documentation.</CustomText>
           </CardTitle>
-          <GridContainer>
-              <SnackbarButton position="top-left" buttonText="top-left">
+          <CustomText large style={{ textAlign: 'center' }}>
+            Notifications Places
+          </CustomText>
+          <CustomText gray style={{ textAlign: 'center' }}>
+            Click to view notifications
+          </CustomText>
+          <GridContainer style={{ alignSelf: 'center', paddingBottom: '0' }}>
+              <SnackbarButton 
+                position="top-left" 
+                buttonText="top-left"
+                style={{ width: '300px' }}
+              >
                 Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer.
               </SnackbarButton>
-              <SnackbarButton position="top-center" buttonText="Top-Center">
+              <SnackbarButton 
+                position="top-center" 
+                buttonText="Top-Center"
+                style={{ width: '300px' }}
+              >
                 Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer.
               </SnackbarButton>
-              <SnackbarButton position="top-right" buttonText="top-right">
+              <SnackbarButton 
+                position="top-right" 
+                buttonText="top-right"
+                style={{ width: '300px' }}
+              >
                 Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer.
               </SnackbarButton>
           </GridContainer>
-          <GridContainer>
-              <SnackbarButton position="bottom-left" buttonText="bottom-left">
+          <GridContainer style={{ alignSelf: 'center', paddingTop: '0' }}>
+              <SnackbarButton 
+                position="bottom-left" 
+                buttonText="bottom-left"
+                style={{ width: '300px' }}
+              >
                 Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer.
               </SnackbarButton>
-              <SnackbarButton position="bottom-center" buttonText="bottom-center">
+              <SnackbarButton 
+                position="bottom-center" 
+                buttonText="bottom-center"
+                style={{ width: '300px' }}
+              >
                 Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer.
               </SnackbarButton>
-              <SnackbarButton position="bottom-right" buttonText="bottom-right">
+              <SnackbarButton 
+                position="bottom-right" 
+                buttonText="bottom-right"
+                style={{ width: '300px' }}
+              >
                 Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer.
               </SnackbarButton>
           </GridContainer>

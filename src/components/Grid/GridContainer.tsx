@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { CSSObject } from 'styled-components';
 
 const StyledGridContainer = styled.div`
   display: flex;
@@ -7,15 +7,18 @@ const StyledGridContainer = styled.div`
 `;
 
 const GridContainer = (props: Props) => {
+  const { children, style } = props;
+
   return (
-    <StyledGridContainer>
-      {props.children}
+    <StyledGridContainer style={style}>
+      {children}
     </StyledGridContainer>
   );
 };
 
 interface Props {
   children: React.ReactNode;
+  style?: CSSObject;
 }
 
 export default GridContainer; 
