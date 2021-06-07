@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SCardTitle = styled.div`
+const SCardTitle = styled.div<Props>`
   background: linear-gradient(to right, #a7e0e1, #b7d3e9);
-  
+
+  margin-left: ${props => props.transparent ? '-15px' : ''};
+  margin-right: ${props => props.transparent ? '-15px' : ''};
+
   border-radius: 5px;
   padding: 15px 30px;
   margin-top: -40px;
@@ -12,10 +15,10 @@ const SCardTitle = styled.div`
 `;
 
 const CardTitle = (props: Props) => {
-  const { children } = props;
+  const { children, transparent } = props;
 
   return (
-    <SCardTitle>
+    <SCardTitle transparent={transparent}>
       {children}
     </SCardTitle>
   );
@@ -23,6 +26,7 @@ const CardTitle = (props: Props) => {
 
 interface Props {
   children?: React.ReactNode;
+  transparent?: boolean;
 }
 
 export default CardTitle;
